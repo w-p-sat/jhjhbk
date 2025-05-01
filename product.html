@@ -385,10 +385,10 @@
     const email = document.getElementById('email').value;
     const message = document.getElementById('commentText').value;
 
-    if (!rating || !name || !email || !message) {
-        alert("Будь ласка, заповніть всі поля!");
-        return;
-    }
+if (!name.trim() || !email.trim() || rating === null) {
+    alert("Будь ласка, заповніть всі обов’язкові поля!");
+    return;
+}
 
     const commentData = {
         stars: rating,
