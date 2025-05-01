@@ -383,7 +383,10 @@
 
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
-    const message = document.getElementById('commentText').value;
+    let message = document.getElementById('commentText').value;
+    if (!message.trim()) {
+        message = ' '; // або 'Без коментаря'
+    }
 
 if (!name.trim() || !email.trim() || rating === null) {
     alert("Будь ласка, заповніть всі обов’язкові поля!");
